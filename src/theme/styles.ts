@@ -72,10 +72,13 @@ export const globalStyles = {
 			600: '#24388a',
 			700: '#1B254B',
 			800: '#111c44',
-			900: '#0b1437'
+			900: '#121212'
 		},
 		gray: {
 			100: '#FAFCFE'
+		},
+		premiumYellow:{
+			900:'#CA993A'
 		}
 	},
 	styles: {
