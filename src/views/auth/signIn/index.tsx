@@ -40,11 +40,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Custom components
-import { HSeparator } from "components/separator/Separator";
 import DefaultAuth from "layouts/auth/Default";
 // Assets
-import illustration from "assets/img/auth/auth.png";
-import { FcGoogle } from "react-icons/fc";
+import illustration from "assets/img/auth/authbanner.png";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 
@@ -54,17 +52,7 @@ function SignIn() {
   const textColorSecondary = "gray.400";
   const textColorDetails = useColorModeValue("navy.700", "secondaryGray.600");
   const textColorBrand = useColorModeValue("brand.500", "white");
-  const brandStars = useColorModeValue("brand.500", "brand.400");
-  const googleBg = useColorModeValue("secondaryGray.300", "whiteAlpha.200");
-  const googleText = useColorModeValue("navy.700", "white");
-  const googleHover = useColorModeValue(
-    { bg: "gray.200" },
-    { bg: "whiteAlpha.300" }
-  );
-  const googleActive = useColorModeValue(
-    { bg: "secondaryGray.300" },
-    { bg: "whiteAlpha.200" }
-  );
+  const brandYellow = "premiumYellow.900"
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
@@ -112,7 +100,7 @@ function SignIn() {
               fontWeight='500'
               color={textColor}
               mb='8px'>
-              Email<Text color={brandStars}>*</Text>
+              Email<Text color={brandYellow}>*</Text>
             </FormLabel>
             <Input
               isRequired={true}
@@ -131,7 +119,7 @@ function SignIn() {
               fontWeight='500'
               color={textColor}
               display='flex'>
-              Password<Text color={brandStars}>*</Text>
+              Password<Text color={brandYellow}>*</Text>
             </FormLabel>
             <InputGroup size='md'>
               <Input
@@ -170,7 +158,7 @@ function SignIn() {
               </FormControl>
               <NavLink to='/auth/forgot-password'>
                 <Text
-                  color={textColorBrand}
+                  color={brandYellow}
                   fontSize='sm'
                   w='124px'
                   fontWeight='500'>
@@ -182,6 +170,8 @@ function SignIn() {
               fontSize='sm'
               variant='brand'
               fontWeight='500'
+              bg={brandYellow}
+              _hover={{ bg: "#121212", border:"1px solid #CA993A" }}
               w='100%'
               h='50'
               mb='24px'>
@@ -198,7 +188,7 @@ function SignIn() {
               Not registered yet?
               <NavLink to='/auth/sign-up'>
                 <Text
-                  color={textColorBrand}
+                  color={brandYellow}
                   as='span'
                   ms='5px'
                   fontWeight='500'>

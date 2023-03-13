@@ -7,7 +7,7 @@ import React from 'react';
 export default function FixedPlugin(props: { [x: string]: any }) {
 	const { ...rest } = props;
 	const { colorMode, toggleColorMode } = useColorMode();
-	let bgButton = 'linear-gradient(135deg, #868CFF 0%, #4318FF 100%)';
+	let bgButton = 'linear-gradient(135deg, #dfc289 0%, #CA993A 100%)';
 
 	return (
 		<Button
@@ -22,7 +22,7 @@ export default function FixedPlugin(props: { [x: string]: any }) {
 			right={document.documentElement.dir === 'rtl' ? '' : '35px'}
 			bottom='30px'
 			border='1px solid'
-			borderColor='#6A53FF'
+			borderColor="#CA993A"
 			borderRadius='50px'
 			onClick={toggleColorMode}
 			display='flex'

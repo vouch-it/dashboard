@@ -6,7 +6,7 @@ import FixedPlugin from 'components/fixedPlugin/FixedPlugin';
 // Custom components
 import { NavLink } from 'react-router-dom';
 // Assets
-import { FaChevronLeft } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 function AuthIllustration(props: { children: JSX.Element | string; illustrationBackground: string }) {
 	const { children, illustrationBackground } = props;
@@ -27,7 +27,8 @@ function AuthIllustration(props: { children: JSX.Element | string; illustrationB
 				px={{ lg: '30px', xl: '0px' }}
 				ps={{ xl: '70px' }}
 				justifyContent='start'
-				direction='column'>
+				direction='column'
+				>
 				<NavLink
 					to='/admin'
 					style={() => ({
@@ -35,10 +36,10 @@ function AuthIllustration(props: { children: JSX.Element | string; illustrationB
 						marginTop: '40px'
 					})}>
 					<Flex align='center' ps={{ base: '25px', lg: '0px' }} pt={{ lg: '0px', xl: '0px' }} w='fit-content'>
-						<Icon as={FaChevronLeft} me='12px' h='13px' w='8px' color='secondaryGray.600' />
 						<Text ms='0px' fontSize='sm' color='secondaryGray.600'>
-							Back to Simmmple
+							Go to SignUp screen 
 						</Text>
+						<Icon as={FaChevronRight} ml="10px" h='13px' w='8px' color='secondaryGray.600' />
 					</Flex>
 				</NavLink>
 				{children}
