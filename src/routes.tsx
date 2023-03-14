@@ -4,6 +4,7 @@ import { MdBarChart, MdPerson, MdHome, MdLock, MdOutlineShoppingCart } from 'rea
 // Admin Imports
 import MainDashboard from 'views/admin/default';
 import NFTMarketplace from 'views/admin/marketplace';
+import Collections from 'views/admin/collections';
 import Profile from 'views/admin/profile';
 import DataTables from 'views/admin/dataTables';
 
@@ -24,6 +25,14 @@ const routes = [
 		path: '/nft-marketplace',
 		icon: <Icon as={MdOutlineShoppingCart} width='20px' height='20px' color='inherit' />,
 		component: NFTMarketplace,
+		secondary: true
+	},
+	{
+		name: 'Collections Page',
+		layout: '/admin',
+		path: '/collections',
+		icon: <Icon as={MdOutlineShoppingCart} width='20px' height='20px' color='inherit' />,
+		component: Collections,
 		secondary: true
 	},
 	{
